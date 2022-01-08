@@ -3,6 +3,7 @@
 //
 // Generated with Bot Builder V4 SDK Template for Visual Studio EchoBot v4.15.0
 
+using BookingBotRFT.Dialogs;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Bot.Builder;
@@ -38,6 +39,7 @@ namespace BookingBotRFT
             services.AddSingleton<UserState>();
             services.AddSingleton<ConversationState>();
 
+            services.AddTransient<BookingDialog>();
             services.AddTransient<MainDialog>();
 
             // Create the bot as a transient. In this case the ASP Controller is expecting an IBot.

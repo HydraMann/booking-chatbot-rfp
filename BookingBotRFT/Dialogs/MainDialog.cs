@@ -9,21 +9,26 @@ using Microsoft.Bot.Connector;
 using Microsoft.Bot.Schema;
 
 using BookingBotRFT.Dialogs.Data;
+using BookingBotRFT.Dialogs;
 
 namespace BookingBotRFT
 {
+    
     public class MainDialog: ComponentDialog
     {
+
         public MainDialog(UserState userState) : base(nameof(MainDialog))
         {
 
             AddDialog(new TextPrompt(nameof(TextPrompt)));
+            AddDialog(new BookingDialog());
             AddDialog(new ConfirmPrompt(nameof(ConfirmPrompt)));
 
             var waterfallSteps = new WaterfallStep[]
             {
                 MessageStepAsync,
                 ActStepAsync,
+                ConfirmStepAsync,
                 FinalizeStepAsync
             };
 
@@ -48,12 +53,19 @@ namespace BookingBotRFT
 
             switch (result)
             {
+                case "Booking":
+                    return await stepContext.BeginDialogAsync(nameof(BookingDialog),null, cancellation);
 
                 default:
-                    return await stepContext.PromptAsync(nameof(ConfirmPrompt), new PromptOptions() { Prompt = MessageFactory.Text("Is there anything else I can do for you?") }, cancellation);
-
+                    return await stepContext.NextAsync();
             }
-            
+
+
+        }
+
+        private async Task<DialogTurnResult> ConfirmStepAsync(WaterfallStepContext stepContext, CancellationToken cancellation)
+        {
+            return await stepContext.PromptAsync(nameof(ConfirmPrompt), new PromptOptions() { Prompt = MessageFactory.Text("Is there anything else I can do for you?") }, cancellation);
         }
 
         private async Task<DialogTurnResult> FinalizeStepAsync(WaterfallStepContext stepContext, CancellationToken cancellation)
