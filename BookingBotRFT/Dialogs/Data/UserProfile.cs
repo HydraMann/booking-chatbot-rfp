@@ -15,6 +15,8 @@ namespace BookingBotRFT.Dialogs.Data
 
         private string email;
 
+        public string Id;
+
         public string Hotel
         {
             get { return hotel; }
@@ -42,6 +44,11 @@ namespace BookingBotRFT.Dialogs.Data
             Date = _date;
             Name = _name;
             Email = _email;
+        }
+
+        public UserProfile()
+        {
+            
         }
     }
 }
