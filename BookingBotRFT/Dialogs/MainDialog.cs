@@ -23,6 +23,7 @@ namespace BookingBotRFT
             AddDialog(new TextPrompt(nameof(TextPrompt)));
             AddDialog(new BookingDialog());
             AddDialog(new ModifyDialog());
+            AddDialog(new DeleteDialog());
             AddDialog(new ConfirmPrompt(nameof(ConfirmPrompt)));
 
             var waterfallSteps = new WaterfallStep[]
@@ -59,6 +60,9 @@ namespace BookingBotRFT
 
                 case "Modify":
                     return await stepContext.BeginDialogAsync(nameof(ModifyDialog), null, cancellation);
+
+                case "Delete":
+                    return await stepContext.BeginDialogAsync(nameof(DeleteDialog), null, cancellation);
 
                 default:
                     return await stepContext.NextAsync();

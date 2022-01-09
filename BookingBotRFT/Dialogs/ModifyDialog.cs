@@ -21,6 +21,10 @@ namespace BookingBotRFT.Dialogs
             AddDialog(new TextPrompt(nameof(TextPrompt)));
             AddDialog(new WaterfallDialog(nameof(WaterfallDialog), new WaterfallStep[]
             {
+                IdStepAsync,
+                ChooseStepAsync,
+                ModifyStepAsync,
+                FinalizeStepAsync
             }));
 
             InitialDialogId = nameof(WaterfallDialog);
@@ -74,57 +78,67 @@ namespace BookingBotRFT.Dialogs
             int index = 0;
             int current = 0;
 
-            while (sr.EndOfStream)
+            try
             {
-                string line = sr.ReadLine();
-                string[] seperated = line.Split(',');
-                UserProfile profile = new UserProfile(seperated[0], seperated[1], seperated[2], seperated[3], seperated[4]);
-
-                if (profile.Id.Contains((string)stepContext.Values["id"]))
+                while (sr.EndOfStream)
                 {
-                    index = current;
+                    string line = sr.ReadLine();
+                    if (line != null && line != string.Empty)
+                    {
+                        string[] seperated = line.Split(',');
+                        UserProfile profile = new UserProfile(seperated[0], seperated[1], seperated[2], seperated[3], seperated[4]);
+
+                        if (profile.Id.Contains((string)stepContext.Values["id"]))
+                        {
+                            index = current;
+                        }
+
+                        current++;
+
+                        profiles.Add(profile);
+                    }
                 }
 
-                current++;
+                sr.Close();
 
-                profiles.Add(profile);
+                switch ((string)stepContext.Values["change"])
+                {
+                    case "Name":
+                        profiles[index].Name = stepContext.Values["change"].ToString();
+                        break;
+
+                    case "Email":
+                        profiles[index].Email = stepContext.Values["change"].ToString();
+                        break;
+
+                    case "Hotel":
+                        profiles[index].Hotel = stepContext.Values["change"].ToString();
+                        break;
+
+                    case "Date":
+                        profiles[index].Date = stepContext.Values["change"].ToString();
+                        break;
+
+                    default:
+                        await stepContext.Context.SendActivityAsync("No value found");
+                        break;
+                }
+
+                StreamWriter wr = new StreamWriter(path);
+
+                for (int i = 0; i < profiles.Count; i++)
+                {
+                    wr.WriteLine($"{profiles[i].Id},{profiles[i].Name},{profiles[i].Email},{profiles[i].Hotel},{profiles[i].Date}");
+                }
+
+                wr.Close();
+
+                await stepContext.Context.SendActivityAsync("Your data has been changed.");
             }
-
-            sr.Close();
-
-            switch ((string)stepContext.Values["change"])
+            catch (Exception)
             {
-                case "Name":
-                    profiles[index].Name = stepContext.Values["change"].ToString();
-                    break;
 
-                case "Email":
-                    profiles[index].Email = stepContext.Values["change"].ToString();
-                    break;
-
-                case "Hotel":
-                    profiles[index].Hotel = stepContext.Values["change"].ToString();
-                    break;
-
-                case "Date":
-                    profiles[index].Date = stepContext.Values["change"].ToString();
-                    break;
-
-                default:
-                    await stepContext.Context.SendActivityAsync("No value found");
-                    break;
             }
-
-            StreamWriter wr = new StreamWriter(path);
-
-            for (int i = 0; i < profiles.Count; i++)
-            {
-                wr.WriteLine($"{profiles[i].Id},{profiles[i].Name},{profiles[i].Email},{profiles[i].Hotel},{profiles[i].Date}");
-            }
-
-            wr.Close();
-
-            await stepContext.Context.SendActivityAsync("Your data has been changed.");
 
             return await stepContext.EndDialogAsync();
         }
