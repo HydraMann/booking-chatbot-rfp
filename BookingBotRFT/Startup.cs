@@ -40,6 +40,7 @@ namespace BookingBotRFT
             services.AddSingleton<ConversationState>();
 
             services.AddTransient<BookingDialog>();
+            services.AddTransient<ModifyDialog>();
             services.AddTransient<MainDialog>();
 
             // Create the bot as a transient. In this case the ASP Controller is expecting an IBot.

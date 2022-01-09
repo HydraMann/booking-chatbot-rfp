@@ -50,5 +50,14 @@ namespace BookingBotRFT.Dialogs.Data
         {
             
         }
+
+        public UserProfile(string _id, string _name, string _email, string _hotel, string _date)
+        {
+            Hotel = _hotel;
+            Date = _date;
+            Name = _name;
+            Email = _email;
+            Id = _id;
+        }
     }
 }
