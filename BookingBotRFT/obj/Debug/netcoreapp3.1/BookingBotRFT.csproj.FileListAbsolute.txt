@@ -54,3 +54,14 @@ F:\Eke\RFT\BookingBotRFT\BookingBotRFT\bin\Debug\netcoreapp3.1\Microsoft.Recogni
 F:\Eke\RFT\BookingBotRFT\BookingBotRFT\bin\Debug\netcoreapp3.1\Microsoft.Recognizers.Text.DateTime.dll
 F:\Eke\RFT\BookingBotRFT\BookingBotRFT\bin\Debug\netcoreapp3.1\Microsoft.Recognizers.Text.Number.dll
 F:\Eke\RFT\BookingBotRFT\BookingBotRFT\bin\Debug\netcoreapp3.1\Microsoft.Recognizers.Text.NumberWithUnit.dll
+F:\Eke\RFT\BookingBotRFT\BookingBotRFT\bin\Debug\netcoreapp3.1\Castle.Core.dll
+F:\Eke\RFT\BookingBotRFT\BookingBotRFT\bin\Debug\netcoreapp3.1\Microsoft.Bot.Builder.Testing.dll
+F:\Eke\RFT\BookingBotRFT\BookingBotRFT\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+F:\Eke\RFT\BookingBotRFT\BookingBotRFT\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+F:\Eke\RFT\BookingBotRFT\BookingBotRFT\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+F:\Eke\RFT\BookingBotRFT\BookingBotRFT\bin\Debug\netcoreapp3.1\Moq.dll
+F:\Eke\RFT\BookingBotRFT\BookingBotRFT\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
+F:\Eke\RFT\BookingBotRFT\BookingBotRFT\bin\Debug\netcoreapp3.1\xunit.abstractions.dll
+F:\Eke\RFT\BookingBotRFT\BookingBotRFT\bin\Debug\netcoreapp3.1\xunit.assert.dll
+F:\Eke\RFT\BookingBotRFT\BookingBotRFT\bin\Debug\netcoreapp3.1\xunit.core.dll
+F:\Eke\RFT\BookingBotRFT\BookingBotRFT\bin\Debug\netcoreapp3.1\xunit.execution.dotnet.dll

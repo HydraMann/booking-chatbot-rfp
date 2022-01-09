@@ -17,7 +17,7 @@ namespace BookingBotRFT
     public class MainDialog: ComponentDialog
     {
 
-        public MainDialog(UserState userState) : base(nameof(MainDialog))
+        public MainDialog() : base(nameof(MainDialog))
         {
 
             AddDialog(new TextPrompt(nameof(TextPrompt)));

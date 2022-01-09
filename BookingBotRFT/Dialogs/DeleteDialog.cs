@@ -71,15 +71,19 @@ namespace BookingBotRFT.Dialogs
                 while (sr.EndOfStream)
                 {
                     string line = sr.ReadLine();
-                    string[] seperated = line.Split(',');
-                    UserProfile profile = new UserProfile(seperated[0], seperated[1], seperated[2], seperated[3], seperated[4]);
 
-                    if (profile.Id.Contains((string)stepContext.Values["id"]))
+                    if (line != null && line != string.Empty)
                     {
-                        continue;
-                    }
+                        string[] seperated = line.Split(',');
+                        UserProfile profile = new UserProfile(seperated[0], seperated[1], seperated[2], seperated[3], seperated[4]);
 
-                    profiles.Add(profile);
+                        if (profile.Id.Contains((string)stepContext.Values["id"]))
+                        {
+                            continue;
+                        }
+
+                        profiles.Add(profile);
+                    }
                 }
 
                 sr.Close();

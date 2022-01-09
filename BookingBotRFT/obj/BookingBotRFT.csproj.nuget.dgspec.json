@@ -48,6 +48,10 @@
               "target": "Package",
               "version": "[3.1.1, )"
             },
+            "Microsoft.Bot.Builder": {
+              "target": "Package",
+              "version": "[4.15.1, )"
+            },
             "Microsoft.Bot.Builder.Dialogs": {
               "target": "Package",
               "version": "[4.15.1, )"
@@ -55,6 +59,18 @@
             "Microsoft.Bot.Builder.Integration.AspNet.Core": {
               "target": "Package",
               "version": "[4.15.0, )"
+            },
+            "Microsoft.Bot.Builder.Testing": {
+              "target": "Package",
+              "version": "[4.15.1, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.2-pre.12, )"
             }
           },
           "imports": [
