@@ -22,6 +22,8 @@ namespace BookingBotRFT
 
             AddDialog(new TextPrompt(nameof(TextPrompt)));
             AddDialog(new BookingDialog());
+            AddDialog(new ModifyDialog());
+            AddDialog(new DeleteDialog());
             AddDialog(new ConfirmPrompt(nameof(ConfirmPrompt)));
 
             var waterfallSteps = new WaterfallStep[]
@@ -56,6 +58,12 @@ namespace BookingBotRFT
                 case "Booking":
                     return await stepContext.BeginDialogAsync(nameof(BookingDialog),null, cancellation);
 
+                case "Modify":
+                    return await stepContext.BeginDialogAsync(nameof(ModifyDialog), null, cancellation);
+
+                case "Delete":
+                    return await stepContext.BeginDialogAsync(nameof(DeleteDialog), null, cancellation);
+
                 default:
                     return await stepContext.NextAsync();
             }
@@ -82,7 +90,7 @@ namespace BookingBotRFT
             return await stepContext.EndDialogAsync();
         }
 
-        public Attachment CardFactory(string prompt)
+        private Attachment CardFactory(string prompt)
         {
             var card = new HeroCard
             {

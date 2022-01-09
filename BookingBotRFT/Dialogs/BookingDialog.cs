@@ -100,7 +100,11 @@ namespace BookingBotRFT.Dialogs
 
             _userProfile.Id = r.Next(10000000, 99999999).ToString();
 
+            await stepContext.Context.SendActivityAsync($"Your booking ID is { _userProfile.Id}");
+
             wr.WriteLine($"{_userProfile.Id}, {_userProfile.Name}, {_userProfile.Hotel}, {_userProfile.Email}, {_userProfile.Date}");
+
+            wr.Close();
 
             await stepContext.Context.SendActivityAsync("Thank you!");
             return await stepContext.EndDialogAsync();
