@@ -47,3 +47,12 @@ F:\Eke\RFT\BookingBotRFT\BookingBotRFT\obj\Debug\netcoreapp3.1\BookingBotRFT.csp
 F:\Eke\RFT\BookingBotRFT\BookingBotRFT\obj\Debug\netcoreapp3.1\BookingBotRFT.dll
 F:\Eke\RFT\BookingBotRFT\BookingBotRFT\obj\Debug\netcoreapp3.1\BookingBotRFT.pdb
 F:\Eke\RFT\BookingBotRFT\BookingBotRFT\obj\Debug\netcoreapp3.1\BookingBotRFT.genruntimeconfig.cache
+D:\beadandó\RFT\booking-chatbot-rfp\BookingBotRFT\obj\Debug\netcoreapp3.1\BookingBotRFT.csproj.AssemblyReference.cache
+D:\beadandó\RFT\booking-chatbot-rfp\BookingBotRFT\obj\Debug\netcoreapp3.1\BookingBotRFT.GeneratedMSBuildEditorConfig.editorconfig
+D:\beadandó\RFT\booking-chatbot-rfp\BookingBotRFT\obj\Debug\netcoreapp3.1\BookingBotRFT.AssemblyInfoInputs.cache
+D:\beadandó\RFT\booking-chatbot-rfp\BookingBotRFT\obj\Debug\netcoreapp3.1\BookingBotRFT.AssemblyInfo.cs
+D:\beadandó\RFT\booking-chatbot-rfp\BookingBotRFT\obj\Debug\netcoreapp3.1\BookingBotRFT.csproj.CoreCompileInputs.cache
+D:\beadandó\RFT\booking-chatbot-rfp\BookingBotRFT\obj\Debug\netcoreapp3.1\BookingBotRFT.MvcApplicationPartsAssemblyInfo.cs
+D:\beadandó\RFT\booking-chatbot-rfp\BookingBotRFT\obj\Debug\netcoreapp3.1\BookingBotRFT.MvcApplicationPartsAssemblyInfo.cache
+D:\beadandó\RFT\booking-chatbot-rfp\BookingBotRFT\obj\Debug\netcoreapp3.1\BookingBotRFT.dll
+D:\beadandó\RFT\booking-chatbot-rfp\BookingBotRFT\obj\Debug\netcoreapp3.1\BookingBotRFT.pdb

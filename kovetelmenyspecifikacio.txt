@@ -1,0 +1,29 @@
+1.Jelenlegi helyzet
+	A régi rendszerben a foglalás úgy zajlik, hogy a weboldalon feltüntetett telefonszámon kell felhívni az ügyfélszolgálatot, vagy a fenntartott irodába 
+	ellátogatni	és így kell bediktálni, vagy személyesen kitölteni a formanyomtatványt.
+	Miután le lett foglalva a szállás, a diszpécser kolléga továbbítja azt, az adott szálláshely felé.
+
+2.Vágyálom rendszer
+	Növekvõ kereset miatt, már az ügyfélszolgálat nem tudja kiszolgálni az ügyfeleket, ezért egy automatizált rendszert képzeltünk el,
+	ami akár felügyelet nélkül is képes üzemelni. Célunk ezzel a precíz adatrögzítés, személyes adatok biztonságos kezelése, illetve a kapacitásnövelés.
+	Az elvárásun az, hogy egy weboldalba beépíthetõ felületként üzemeljen, ne legyen operációs rendszer függõ, illetve reszponzív legyen a felület, 
+	vagyis PC-n, mobilon, vagy tableten is egyaránt hgasználható legyen.
+
+3.Jelenlegi üzleti folyamatok
+	3.1 Szabad szállásheléyek nyilvántartása
+	3.2 Üzleti partnerek listájának bõvítése
+	3.3 Megkeresés esetén az adatok rögzítése, nyomtatványok kitöltése
+
+4. Igényelt üzleti folyamatok
+	4.1 Online megjelenés
+	4.2 Új szállás rögzítése az adatbázisba adminisztrátor jogosultsággal.
+	4.3 Foglalás rögzítése csak regisztrált felhasználóknak
+
+5. A rendszerre vonatkozó szabályok
+	A képek JPEG/PNG formátumúak lehetnek
+	A felhasználókat azonosító weboldalak esetében érvényes jogszabályokat be kell tartani
+
+6. Követelménylista
+	K.1. Könnyen használható felület
+	K.2. Reszponzív dizájn
+	...
