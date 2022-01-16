@@ -44,6 +44,8 @@ namespace BookingBotRFT
             services.AddTransient<DeleteDialog>();
             services.AddTransient<MainDialog>();
 
+            services.AddTransient<ContactSupportDialog>();
+
             // Create the bot as a transient. In this case the ASP Controller is expecting an IBot.
             services.AddTransient<IBot, Bots.EchoBot<MainDialog>>();
         }

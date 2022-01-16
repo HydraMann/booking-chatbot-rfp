@@ -8813,25 +8813,28 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Admin\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Dénes\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Eke\\RFT\\BookingBotRFT\\BookingDialogTests\\BookingDialogTests.csproj",
+      "projectUniqueName": "D:\\beadandó\\RFT\\booking-chatbot-rfp\\BookingDialogTests\\BookingDialogTests.csproj",
       "projectName": "BookingDialogTests",
-      "projectPath": "F:\\Eke\\RFT\\BookingBotRFT\\BookingDialogTests\\BookingDialogTests.csproj",
-      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "F:\\Eke\\RFT\\BookingBotRFT\\BookingDialogTests\\obj\\",
+      "projectPath": "D:\\beadandó\\RFT\\booking-chatbot-rfp\\BookingDialogTests\\BookingDialogTests.csproj",
+      "packagesPath": "C:\\Users\\Dénes\\.nuget\\packages\\",
+      "outputPath": "D:\\beadandó\\RFT\\booking-chatbot-rfp\\BookingDialogTests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Dénes\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -8844,8 +8847,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "F:\\Eke\\RFT\\BookingBotRFT\\BookingBotRFT\\BookingBotRFT.csproj": {
-              "projectPath": "F:\\Eke\\RFT\\BookingBotRFT\\BookingBotRFT\\BookingBotRFT.csproj"
+            "D:\\beadandó\\RFT\\booking-chatbot-rfp\\BookingBotRFT\\BookingBotRFT.csproj": {
+              "projectPath": "D:\\beadandó\\RFT\\booking-chatbot-rfp\\BookingBotRFT\\BookingBotRFT.csproj"
             }
           }
         }
@@ -8892,7 +8895,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }
