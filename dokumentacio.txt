@@ -1,0 +1,54 @@
+A rendszerfejlesztés technológiája ea. 
+A tárgy kódja: LBT_IM715K3
+Oktató: Dr. Tajti Tibor Gábor	
+
+Készítette: Nagy Norbert CTHNET & Mezõ Dénes SJQ8T5
+
+Alapötlet:
+Az általunk készített projekt egy chatbot, aminek segítségével szálláshelyet tudunk foglalni, korábbi folgalást módosítani, vagy törölni.
+
+Használt Framework:
+Microsoft Bot Framework
+
+Használt Service:
+  Microsoft Azure:
+	-Backendnek App Service resource készítése majd DirectLine-al összekötni a frontenddel
+	-Platform as a Service
+	-VNet létrehozása a opcionálisan
+	-Védelem Azure Sentinel hozzáadásával
+	-Storage: Blob storage a production verziónál, Memory storage a development verziónál
+	-Opcionálisan LUIS Recognizer hozzáadása
+	-Ügyfél igényei szerint késõbb Adaptive cardok hozzáadása kérdõív szerû kitöltéshez
+
+Programnyelv: 
+	-C#
+
+A foglalás folyamatának menete: 
+	1.lépés:
+		A bot miután köszöntött minket vár valamilyen szöveget. Miután kapott tõlönk egy üzenetet, felkínál három lehetõséget, aszerint, hogy mit szeretnénk csinálni.
+		Az elsõ ilyen lehetõség a foglalás.
+		A második a már meglévõ foglalás törlése.
+		A harmadik pedig a foglalás módosítása.
+
+	2.lépés - Foglalás:
+		Miután kiválasztottuk azt, hogy szállást szeretnénk foglalni, a bot bekéri az általunk kiválasztott szállásnak a nevét, azt, hogy mikorra szeretnénk lefoglalni
+		a mi nevünket és az email címünket.
+
+		Miután lefoglaltuk a szállást a bot segítségével, akkor öt adatot tárol el rólunk, illetve a  foglalásról.
+			-Az elsõ a lefoglalt szálláshely neve. 
+			-A második adat a foglalás idõpontja, vagyis az a dátum amikor az ügyfél várhatólan el fogja folalni a szobát.
+			-A harmadik adat a foglaló neve.
+			-A negyedik az ügyfél email címe.
+			-Az ötödik tárolt adat pedig a rendszer által generál ID.
+
+	3.lépés - Módosítás - Opcionális:
+		A módosításhoz elõszõr is bekéri a foglalás végén kapott ID-t. Ezután a már ismert formában ki kell választani a felsorolt elemek közül azt, 
+		hogy mit szeretnénk módosítani (szállás neve, idõpont, foglaló neve, email). Kiválasztás után egyszerûen begépeli az új adatokat, és azt a rendszer lementi.
+
+	4.lépés - Törlés - Opcionális:
+		A törlés folyamata elég egyszerû. Szintén a rendelés mellé generált ID-t kéri be a rendszer. Miután ezt megkapta, egy eldöntendõ kérdést feltesz arról, 
+		hogy biztosan szeretnénk e törölni a foglalást. Igen válasz esetén törli azt, nemleges válasz esetén elveti a folyamatot.
+
+	5.lépés - Contact Support:
+		A felhasználó probléma esetén kapcsolatba léphet az ilyen feladatkörben lévõ alkalmazottal. A probléma leírása után létrehozhat és 
+		megerõsítése egy ticketet a cég rendszerében.
