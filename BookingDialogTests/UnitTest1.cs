@@ -60,5 +60,23 @@ namespace BookingDialogTests
 
             var Results = (MainDialog)testClient.DialogTurnResult.Result;
         }
+
+        [TestMethod]
+        public async Task ContactSupportTest()
+        {
+            var sut = new MainDialog();
+            var testClient = new DialogTestClient(Channels.Msteams, sut);
+
+            var reply = await testClient.SendActivityAsync<IMessageActivity>("hi");
+            Assert.AreEqual(null, reply.Text);
+
+            reply = await testClient.SendActivityAsync<IMessageActivity>("Contact support");
+            Assert.AreEqual("Please type in your message", reply.Text);
+
+            reply = await testClient.SendActivityAsync<IMessageActivity>("Support Test");
+            Assert.AreEqual(null, reply.Text);
+
+            var Results = (MainDialog)testClient.DialogTurnResult.Result;
+        }
     }
 }

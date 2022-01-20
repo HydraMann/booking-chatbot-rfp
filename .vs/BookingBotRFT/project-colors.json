@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "e65e108e-f941-4909-b27b-d0d757e69c2d": {
+      "ProjectGuid": "e65e108e-f941-4909-b27b-d0d757e69c2d",
+      "DisplayName": "BookingDialogTests",
+      "ColorIndex": 0
+    },
+    "41018367-7697-4966-8827-14251a00787f": {
+      "ProjectGuid": "41018367-7697-4966-8827-14251a00787f",
+      "DisplayName": "BookingBotRFT",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}

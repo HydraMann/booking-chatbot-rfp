@@ -25,6 +25,7 @@ namespace BookingBotRFT
             AddDialog(new ModifyDialog());
             AddDialog(new DeleteDialog());
             AddDialog(new ConfirmPrompt(nameof(ConfirmPrompt)));
+            AddDialog(new ContactSupportDialog());
 
             var waterfallSteps = new WaterfallStep[]
             {
@@ -64,6 +65,9 @@ namespace BookingBotRFT
                 case "Delete":
                     return await stepContext.BeginDialogAsync(nameof(DeleteDialog), null, cancellation);
 
+                case "Contact support":
+                    return await stepContext.BeginDialogAsync(nameof(ContactSupportDialog), null, cancellation);
+
                 default:
                     return await stepContext.NextAsync();
             }
@@ -100,6 +104,7 @@ namespace BookingBotRFT
                     new CardAction(ActionTypes.ImBack, title: "Booking", value: "Booking"),
                     new CardAction(ActionTypes.ImBack, title: "Delete", value: "Delete"),
                     new CardAction(ActionTypes.ImBack, title: "Modify", value: "Modify"),
+                    new CardAction(ActionTypes.ImBack, title: "Contact support", value: "Contact support"),
                 },
             };
 
